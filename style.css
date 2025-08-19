@@ -1,0 +1,789 @@
+*{
+    margin: 0;
+}
+@font-face {
+  font-family: 'BlackMango';
+  src: url("./blackmango-font/BlackMango-Medium.ttf") format('woff2'),
+       url('blackmango-font/BlackMango.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #4F3047;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-bottom: 100px;
+}
+
+.logo {
+    font-size: 2.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    font-family: "BlackMango";
+}   
+
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    background: rgba(79,48,71,0.18);
+    padding: 2rem 0.8rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(58,32,102,0.08);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-family: "Raleway", serif;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 5vw;
+    gap: 60px;
+    background: linear-gradient(120deg, #fafafa 70%, #e8d6e7 100%);
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 8px 32px rgba(79,48,71,0.07);
+    margin: 0 auto 40px auto;
+    position: relative;
+    top: 0; /* Corregido para evitar superposición */
+    transition: box-shadow 0.3s;
+}
+
+.about-section:hover {
+    box-shadow: 0 12px 40px rgba(79,48,71,0.13);
+}
+
+.about-content {
+    flex: 1.2;
+    max-width: 720px;
+    padding: 24px 0;
+}
+
+.about-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+    color: #4F3047;
+    font-family: "Raleway", serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: #5a4a5a;
+    line-height: 1.8;
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    padding: 18px 22px;
+    border-radius: 14px;
+    
+}
+
+.about-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+}
+
+.about-image img {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(79,48,71,0.13);
+    object-fit: cover;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 16px 48px rgba(79,48,71,0.18);
+}
+
+/* Misión Section */
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 5vw;
+    gap: 60px;
+    background: linear-gradient(120deg, #fafafa 70%, #e8d6e7 100%);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(79,48,71,0.07);
+    margin: 0 auto 40px auto;
+    
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+.mission-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+}
+
+.mission-image img {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(79,48,71,0.13);
+    object-fit: cover;
+    
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-image img:hover {
+    transform: scale(1.04) rotate(2deg);
+    box-shadow: 0 16px 48px rgba(79,48,71,0.18);
+}
+
+.mission-content {
+    flex: 1.2;
+    max-width: 720px;
+    padding: 24px 0;
+}
+
+.mission-content h2 {
+    font-size: 2.1rem;
+    margin-bottom: 1.2rem;
+    color: #4F3047;
+    font-family: "Raleway", serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.mission-content p {
+    font-size: 1.1rem;
+    color: #5a4a5a;
+    line-height: 1.7;
+    font-weight: 400;
+    padding: 16px 20px;
+    border-radius: 14px;
+    font-family: "Raleway", serif;
+    margin-bottom: 1.2rem;
+}
+
+.mission-content h3 {
+    font-size: 1.3rem;
+    color: #4F3047;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+    font-family: 'BlackMango', serif;
+}
+
+.mission-content ul {
+    color: #5a4a5a;
+    font-size: 1.08rem;
+    padding-left: 1.2em;
+    line-height: 1.7;
+}
+
+.mission-content ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .about-section{
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 4vw;
+        top: 0;
+        border-radius: 24px;
+    }
+
+    .about-image {
+        padding-left: 0px;
+    }   
+
+    .mission-section{
+        flex-direction: column-reverse;
+    }
+    .mission-image {
+        padding-right: 0;
+    }
+    .about-image img,
+    .mission-image img {
+        max-width: 400px;
+    }
+    .about-content,
+    .mission-content {
+        max-width: 100%;
+    }
+}
+
+/* ...existing code... */
+@media (max-width: 600px) {
+    .navbar {
+        height: 70px;
+        margin: auto;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .hero-image{
+        height: 650px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .hero-image img {
+        height: 650px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .hero-text {
+        padding: 1.2rem 0.5rem;
+        border-radius: 10px;
+        width: 90vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 95vw;
+        box-sizing: border-box;
+    }
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.7rem;
+    }
+
+    .about-section,
+    .mission-section {
+        padding: 30px 2vw;
+        gap: 18px;
+    }
+    .about-content h2,
+    .mission-content h2 {
+        font-size: 1.5rem;
+        padding: 12px 12px;
+    }
+    .about-content p,
+    .mission-content p,
+    .mission-content ul {
+        font-size: 1.1rem;
+        padding: 12px 12px;
+    }
+}
+
+/* Agrega esto al final de tu archivo style.css */
+.app-section {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 60px 5vw 0 5vw;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.app-content {
+    flex: 1.2;
+    min-width: 260px;
+}
+
+.app-content h2 {
+    font-size: 2rem;
+    color: #4F3047;
+    font-family: "Raleway", serif;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.app-content p {
+    font-size: 1.15rem;
+    color: #5a4a5a;
+    line-height: 1.7;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.app-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 550px;
+}
+
+.app-image img {
+    width: 400px;
+    max-width: 400px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(79,48,71,0.13);
+    background: #fff;
+    object-fit: contain;
+}
+
+/* Agrega esto al final de tu archivo style.css */
+.app-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.app-btn {
+    display: inline-block;
+    background-color: #4F3047;
+    color: white;
+    font-family: 'BlackMango', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(79,48,71,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    letter-spacing: 1px;
+}
+
+.app-btn:hover {
+    background: linear-gradient(90deg, #a084ca 0%, #d1b3ff 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .app-section {
+        flex-direction: column;
+        gap: 28px;
+        padding: 30px 2vw 0px ;
+    }
+    .app-image img {
+        width: 80vw;
+        max-width: 280px;
+    }
+    .app-content h2 {
+        font-size: 1.4rem;
+    }
+    .app-content {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-section {
+        padding: 24px 1vw 0 1vw;
+        gap: 18px;
+    }
+    .app-image {
+        min-width: 0;
+    }
+    .app-image img {
+        width: 80vw;
+        max-width: 80vw;
+    }
+}
+
+
+
+.hotels-section {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 60px 5vw 0 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotels-section h2 {
+    font-size: 2.1rem;
+    color: #4F3047;
+    font-family: "Raleway";
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 32px;
+    justify-items: center;
+}
+
+.hotel-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hotel-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    box-shadow: 0 4px 16px rgba(79,48,71,0.10);
+    background: #fff;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotel-icon img:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(79,48,71,0.18);
+}
+
+.hotel-icon span {
+    font-size: 1.1rem;
+    color: #4F3047;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+    font-weight: 500;
+    margin-top: 0.3rem;
+}
+
+@media (max-width: 900px) {
+    .hotels-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hotels-section {
+        padding: 30px 2vw 0 2vw;
+    }
+    .hotels-grid {
+        grid-template-columns: 1fr;
+        gap: 24px 0;
+    }
+    .hotel-icon img {
+        width: 70px;
+        height: 70px;
+    }
+    .hotels-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Agrega esto al final de tu archivo style.css */
+.reviews-section {
+    max-width: 1800px;
+    margin: 0 auto 60px auto;
+    padding: 10px 5vw 0 5vw;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 2rem;
+    color: #4F3047;
+    font-family: "Raleway", serif;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.reviews-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(79,48,71,0.10);
+    padding: 32px 22px 24px 22px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(79,48,71,0.16);
+}
+
+.review-photo img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0c3fc;
+    margin-bottom: 1rem;
+    background: #f7f8fa;
+}
+
+.review-content p {
+    font-size: 1.08rem;
+    color: #4F3047;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.review-author {
+    font-size: 1rem;
+    color: #4F3047;
+    font-family: 'BlackMango', serif;
+    font-weight: 600;
+    display: block;
+}
+
+.review-author small {
+    font-size: 0.95rem;
+    color: #5a4a5a;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        gap: 24px;
+    }
+    .review-card {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 30px 2vw 0 2vw;
+    }
+    .reviews-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+}
+
+/* Mejora responsive para la sección de contacto */
+.contact-section {
+    max-width: 500px;
+    margin: 40px auto 60px auto;
+    padding: 32px 5vw 24px 5vw;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #4F3047;
+    font-family: 'BlackMango', serif;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contact-desc {
+    font-size: 1.2rem;
+    color: #4F3047;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.contact-mail-btn {
+    display: inline-block;
+    background-color: #4F3047;
+    color: white;
+    font-family: 'BlackMango', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(79,48,71,0.08);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
+.contact-mail-btn:hover {
+    background: linear-gradient(90deg, #a084ca 0%, #d1b3ff 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.contact-info {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #4F3047;
+    font-family: 'Raleway', Arial, sans-serif;
+    word-break: break-all;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 18px 2vw 12px 2vw;
+    }
+    .contact-section h2 {
+        font-size: 1.3rem;
+    }
+    .contact-mail-btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+    .contact-info {
+        font-size: 0.95rem;
+    }
+}
+
+.contact-insta-btn {
+    display: inline-block;
+    background-color: #7d4c71;
+    color: white;
+    font-family: 'BlackMango', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(79,48,71,0.08);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
+.contact-insta-btn:hover {
+    background: linear-gradient(90deg, #a084ca 0%, #d1b3ff 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+
+.footer {
+    width: 100%;
+    background: #4F3047;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 18px 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-size: 1rem;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    animation: slideDown 0.8s cubic-bezier(.77,0,.18,1) 0.1s both;
+}
+
+
+
+.hero-text {
+    animation: fadeInUp 2s cubic-bezier(.77,0,.18,1) 0.5s both;
+}
+
+/* Clase animado: animación suave al aparecer en pantalla */
+@keyframes fadeInUpAnimado {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animado {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animado.visible {
+    animation: fadeInUpAnimado 0.9s cubic-bezier(.77,0,.18,1) both;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
